@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: "Nick Vinokour — Portfolio",
   description: "Software engineer focused on building reliable, performant products.",
   metadataBase: new URL("https://example.com"),
+  icons: {
+    icon: '/nv-logo.png',
+    apple: '/nv-logo.png',
+  },
   openGraph: {
     title: "Nick Vinokour — Portfolio",
     description:
