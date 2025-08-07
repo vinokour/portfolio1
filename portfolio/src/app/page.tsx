@@ -143,10 +143,19 @@ export default function Home() {
         <div className={`mb-16 transition-all duration-1000 ease-out delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="max-w-3xl">
             <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              I graduated from the University of Michigan in May with a CS degree.
+              Hi, I&apos;m Nick, it&apos;s nice to meet you!
             </p>
+            <br />
             <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m open to any role and excited to contribute wherever I can!
+              I graduated from the University of Michigan in May with a CS degree. 
+            </p>
+            <br />
+            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
+            When I&apos;m not working, you&apos;ll find me running through the city, watching films, or trying to win my fantasy football league for the first time since 7th grade.
+            </p>
+            <br />
+            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
+              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m currently open to any role and excited to contribute wherever I can!
             </p>
           </div>
         </div>
