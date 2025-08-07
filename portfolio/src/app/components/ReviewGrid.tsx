@@ -29,7 +29,7 @@ export default function ReviewGrid({ heading = "Favorite reviews", reviews }: Re
               </div>
               <div>
                 <p className="text-sm font-medium leading-snug text-[#e5e5e5]">{r.title}</p>
-                <p className="mt-1 text-sm text-[#d1d5db] line-clamp-3 italic">"{r.blurb.trim()}"</p>
+                <p className="mt-1 text-sm text-[#d1d5db] line-clamp-3 italic">&ldquo;{r.blurb.trim()}&rdquo;</p>
               </div>
             </div>
           </a>

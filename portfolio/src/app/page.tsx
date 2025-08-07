@@ -138,7 +138,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
               I graduated from the University of Michigan in May with a CS degree. 
-              I had an offer from ScaleAI that got rescinded before I started, so I'm currently 
+              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m currently 
               open to any role and excited to contribute wherever I can.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
         {/* Films and Reviews - Side by side */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 transition-all duration-1000 ease-out delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <FilmGrid heading="FAVORITE FILMS" films={films} />
-          <ReviewGrid heading="MY FAVORITE REVIEWS I'VE WRITTEN" reviews={reviews} />
+          <ReviewGrid heading="MY FAVORITE REVIEWS I&apos;VE WRITTEN" reviews={reviews} />
         </div>
       </div>
     </main>
