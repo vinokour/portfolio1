@@ -100,6 +100,12 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-2xl font-semibold tracking-tight text-[#e5e5e5]">Nick Vinokour</h1>
+              <div className="flex items-center gap-2 mt-1">
+                <svg className="w-4 h-4 text-[#9ca3af]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-[#9ca3af]">New York City</span>
+              </div>
             </div>
           </div>
           
@@ -137,9 +143,10 @@ export default function Home() {
         <div className={`mb-16 transition-all duration-1000 ease-out delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="max-w-3xl">
             <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              I graduated from the University of Michigan in May with a CS degree. 
-              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m currently 
-              open to any role and excited to contribute wherever I can.
+              I graduated from the University of Michigan in May with a CS degree.
+            </p>
+            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
+              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m open to any role and excited to contribute wherever I can!
             </p>
           </div>
         </div>
