@@ -139,24 +139,110 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bio section */}
-        <div className={`mb-16 transition-all duration-1000 ease-out delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="max-w-3xl">
-            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              Hi, I&apos;m Nick, it&apos;s nice to meet you!
-            </p>
-            <br />
-            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              I graduated from the University of Michigan in May with a CS degree. 
-            </p>
-            <br />
-            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-            When I&apos;m not working, you&apos;ll find me running through the city, watching films, or trying to win my fantasy football league for the first time since 7th grade.
-            </p>
-            <br />
-            <p className="text-lg sm:text-xl text-[#e5e5e5] leading-relaxed font-light">
-              I had an offer from ScaleAI that got rescinded before I started, so I&apos;m currently open to any role and excited to contribute wherever I can!
-            </p>
+        {/* Bio section with favorite films and PDF card */}
+        <div className={`mb-12 sm:mb-16 transition-all duration-1000 ease-out delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 items-start">
+            {/* Bio text - left side */}
+            <div className="lg:col-span-2">
+              <div className="max-w-2xl">
+                <p className="text-base sm:text-lg lg:text-xl text-[#e5e5e5] leading-relaxed font-light">
+                  Hi, I&apos;m Nick, it&apos;s nice to meet you!
+                </p>
+                <br />
+                <p className="text-base sm:text-lg lg:text-xl text-[#e5e5e5] leading-relaxed font-light">
+                  I graduated from the University of Michigan in May with a CS degree. 
+                </p>
+                <br />
+                <p className="text-base sm:text-lg lg:text-xl text-[#e5e5e5] leading-relaxed font-light">
+                When I&apos;m not working, you&apos;ll find me running through the city, watching films, or trying to win my fantasy football league for the first time since 7th grade.
+                </p>
+                <br />
+                <p className="text-base sm:text-lg lg:text-xl text-[#e5e5e5] leading-relaxed font-light">
+                  I had an offer from ScaleAI that got rescinded before I started, so I&apos;m currently open to any role and excited to contribute wherever I can!
+                </p>
+              </div>
+
+              {/* IP Thoughts PDF Card - below bio text */}
+              <div className="mt-6 sm:mt-8">
+                <a 
+                  href="/Thoughts_on_IP_in_2025.pdf" 
+                  target="_blank" 
+                  rel="noreferrer noopener" 
+                  className="group block"
+                >
+                  <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#2a2d33] bg-gradient-to-br from-[#1a1d23] to-[#0f1419] p-4 sm:p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-[#2a2d33]/20 hover:scale-[1.02] hover:border-[#3a3d43]">
+                    {/* Background pattern */}
+                    <div className="absolute inset-0 opacity-5">
+                      <div className="absolute inset-0" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"7\" cy=\"7\" r=\"1\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
+                    </div>
+                    
+                    <div className="relative flex items-center gap-3 sm:gap-4">
+                      {/* PDF Icon */}
+                      <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/30 border border-red-500/30 flex items-center justify-center group-hover:from-red-500/30 group-hover:to-red-600/40 transition-all duration-300">
+                        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-red-400 group-hover:text-red-300 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start sm:items-center gap-2 mb-2">
+                          <h3 className="text-base sm:text-lg font-semibold text-[#e5e5e5] group-hover:text-white transition-colors leading-tight">
+                            Thoughts on the Film Industry
+                          </h3>
+                          <svg className="w-4 h-4 text-[#9ca3af] group-hover:text-[#e5e5e5] transition-all duration-300 group-hover:translate-x-1 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </div>
+                        <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed group-hover:text-[#b3b8bf] transition-colors">
+                          Some takes, hot or cold.
+                        </p>
+                        <div className="mt-2 sm:mt-3 flex flex-wrap items-center gap-2">
+                          <span className="inline-flex items-center px-2 sm:px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            August 15, 2025
+                          </span>
+                          <span className="text-xs text-[#6b7280]">PDF • 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            {/* Favorite Films - right side */}
+            <div className="mt-6 sm:mt-8 lg:mt-0">
+              <h2 className="text-sm font-medium tracking-[0.08em] uppercase text-[#9ca3af]">
+                FAVORITE FILMS
+              </h2>
+              <div className="mt-2 mb-4 sm:mb-6 h-px bg-[#2a2d33]"></div>
+              
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 max-w-xs mx-auto lg:mx-0">
+                {films.map((film, index) => (
+                  <a
+                    key={film.title}
+                    href={film.href ?? "#"}
+                    className="group block"
+                    aria-label={film.title}
+                  >
+                    {/* Outer frame */}
+                    <div 
+                      className={`rounded-lg sm:rounded-xl border border-[#2a2d33] bg-[#1a1d23] p-0.5 shadow-sm transition-all duration-700 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                      style={{ transitionDelay: `${index * 50 + 300}ms` }}
+                    >
+                      {/* Inner mat + poster */}
+                      <div className="rounded-md sm:rounded-lg overflow-hidden border-[2px] sm:border-[3px] border-[#2a2d33] shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
+                        <img
+                          src={film.src}
+                          alt={film.title}
+                          className="aspect-[2/3] w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -165,9 +251,8 @@ export default function Home() {
           <ProjectGrid heading="EXPERIENCES & PROJECTS" projects={projects} />
         </div>
 
-        {/* Films and Reviews - Side by side */}
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 transition-all duration-1000 ease-out delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <FilmGrid heading="FAVORITE FILMS" films={films} />
+        {/* Reviews section */}
+        <div className={`transition-all duration-1000 ease-out delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <ReviewGrid heading="MY FAVORITE REVIEWS I&apos;VE WRITTEN" reviews={reviews} />
         </div>
       </div>
